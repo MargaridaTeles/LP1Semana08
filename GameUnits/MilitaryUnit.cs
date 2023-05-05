@@ -1,32 +1,34 @@
-namespace GameUnits;
-
-public class MilitaryUnit : Unit
+namespace GameUnits
 {
-    private int AttackPower { get; }
-    private int Xp { get; set; }
-    public override float Cost { get; }
-
-    public MilitaryUnit(int movement, int health, int attackPower) : base(movement, health)
+    public class MilitaryUnit : Unit
     {
-        AttackPower = attackPower;
-        Xp = 0;
-        Health += Xp;
-        Cost = AttackPower + Xp;
-    }
+        private int AttackPower { get; }
+        private int Xp { get; set; }
+        public override float Cost { get; }
 
-    public void Attack(Unit u)
-    {
-        if (u.Health == 0) return;
-        else
+        public MilitaryUnit(int movement, int health, int attackPower) : base(movement, health)
         {
-            u.Health -= AttackPower;
-            if (u.Health < 0) u.Health = 0;
+            AttackPower = attackPower;
+            Xp = 0;
+            Health += Xp;
+            Cost = AttackPower + Xp;
+        }
+
+        public void Attack(Unit u)
+        {
+            if (u.Health == 0) return;
+            else
+            {
+                u.Health -= AttackPower;
+                if (u.Health < 0) u.Health = 0;
             
-            Xp++;
+                Xp++;
+            }
+    }
+        public override string ToString()
+        {
+            return $"MilitaryUnit: HP = {Health} COST = {Cost} AP = {AttackPower} XP = {Xp}";
         }
     }
-    public override string ToString()
-    {
-        return $"MilitaryUnit: HP = {Health} COST = {Cost} AP = {AttackPower} XP = {Xp}";
-    }
 }
+

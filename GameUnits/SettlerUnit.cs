@@ -1,13 +1,14 @@
-namespace GameUnits;
-
-public class SettlerUnit : Unit
+namespace GameUnits
 {
-    public override float Cost { get; }
-
-    public SettlerUnit(int movement, int health) : base(movement, health)
+    public class SettlerUnit : Unit
     {
-        Movement = movement;
-        Health = health;
-        Cost = 5;
+        public override float Cost { get; }
+
+        public SettlerUnit(int movement, int health) : base(movement, health)
+        {
+            Movement = movement;
+            Health = health;
+            Cost = 5;
+        }
     }
 }
