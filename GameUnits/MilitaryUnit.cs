@@ -27,6 +27,6 @@ public class MilitaryUnit : Unit
     }
     public override string ToString()
     {
-        return $"Military Unit: HP = {Health} Cost = {Cost} Attack Power = {AttackPower} XP = {Xp}";
+        return $"MilitaryUnit: HP = {Health} COST = {Cost} AP = {AttackPower} XP = {Xp}";
     }
 }

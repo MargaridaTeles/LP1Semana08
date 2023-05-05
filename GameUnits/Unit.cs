@@ -20,6 +20,6 @@ public abstract class Unit
     }
     public override string ToString()
     {
-        return $"Settler Unit: HP = {Health} Cost = {Cost}";
+        return $"SettlerUnit: HP = {Health} COST = {Cost}";
     }
 }
