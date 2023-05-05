@@ -2,11 +2,26 @@
 
 namespace GameUnits
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Unit[] allUnits = new Unit[]
+            {
+                new MilitaryUnit(3, 10, 5),
+                new MilitaryUnit(3, 10, 5),
+                new SettlerUnit(1, 5),
+            };
+            
+            (allUnits[0] as MilitaryUnit)!.Attack(allUnits[1]);
+            (allUnits[1] as MilitaryUnit)!.Attack(allUnits[0]);
+            (allUnits[1] as MilitaryUnit)!.Attack(allUnits[2]);
+            
+            foreach (Unit u in allUnits)
+            {
+                u.Move();
+            }
+            
         }
     }
 }
