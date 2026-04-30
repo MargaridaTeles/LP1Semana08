@@ -31,5 +31,11 @@ namespace GameUnit
             u.Health -= AttackPower;
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + $" AP={AttackPower} XP={XP}";
+        }
+
+
     }
 }
