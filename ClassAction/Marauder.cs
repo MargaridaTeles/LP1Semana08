@@ -15,7 +15,13 @@ namespace ClassAction
 
         public override void Describe()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} [Marauder] (Health: {Health}, Damage: {Damage}, Strength: {Strength})");
         }
+        
+        public override void Attack()
+        {
+            Console.WriteLine("Attack: Earthquake!");
+        }
+
     }
 }

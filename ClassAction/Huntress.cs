@@ -16,7 +16,12 @@ namespace ClassAction
 
         public override void Describe()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} [Huntress] (Health: {Health}, Damage: {Damage}, Dexterity: {Dexterity})");
+        }
+
+        public override void Attack()
+        {
+            Console.WriteLine("Attack: Fangs of Frost!");
         }
     }
 }
