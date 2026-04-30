@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ClassVsStruct/ClassVsStruct.csproj" />
   <Project Path="MiniGame/MiniGame.csproj" />
+  <Project Path="Polimorfismo/Polimorfismo.csproj" />
   <Project Path="StructWithRef/StructWithRef.csproj" />
 </Solution>
